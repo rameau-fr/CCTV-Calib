@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Keypoints_Dialog</class>
+ <widget class="QDialog" name="Keypoints_Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1055</width>
+    <height>576</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>keypoints selection</string>
+  </property>
+  <widget class="QGraphicsView" name="sat_im_graphicsView">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>491</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="cursor" stdset="0">
+    <cursorShape>CrossCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="dragMode">
+    <enum>QGraphicsView::NoDrag</enum>
+   </property>
+   <property name="transformationAnchor">
+    <enum>QGraphicsView::AnchorUnderMouse</enum>
+   </property>
+   <property name="resizeAnchor">
+    <enum>QGraphicsView::AnchorUnderMouse</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sat_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>102</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Satellite image</string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="cctv_im_graphicsView">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>130</y>
+     <width>491</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="cursor" stdset="0">
+    <cursorShape>CrossCursor</cursorShape>
+   </property>
+   <property name="transformationAnchor">
+    <enum>QGraphicsView::AnchorUnderMouse</enum>
+   </property>
+   <property name="resizeAnchor">
+    <enum>QGraphicsView::AnchorUnderMouse</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cctv_label">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>110</y>
+     <width>73</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>cctv image</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>362</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="NbPts_label">
+      <property name="text">
+       <string>Number of points:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="NbPt_spinBox">
+      <property name="minimum">
+       <number>4</number>
+      </property>
+      <property name="value">
+       <number>7</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="text">
+       <string>Display point's indexes</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>153</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QLabel" name="CurrentPt_label">
+      <property name="text">
+       <string>current points:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="CurrentPt_spinBox"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>520</y>
+     <width>171</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>Point index size:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="FontSizeSat_spinBox">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>3</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>480</y>
+     <width>457</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>marker type: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="markerTypeCCTV_spinBox">
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>6</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>marker Size: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="markerSizeCCTV_spinBox">
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="value">
+       <number>12</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>marker Thickness: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="markerThickCCTV_spinBox">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>3</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>480</y>
+     <width>457</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>marker type: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="markerTypeSat_spinBox">
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>6</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>marker Size: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="markerSizeSat_spinBox">
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="value">
+       <number>12</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>marker Thickness: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="markerThickSat_spinBox">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>3</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>520</y>
+     <width>171</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <item>
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>Point index size:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="FontSizeCCTV_spinBox">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>200</number>
+      </property>
+      <property name="value">
+       <number>3</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>20</y>
+     <width>82</width>
+     <height>58</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="help_pushButton">
+      <property name="text">
+       <string>Help</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDialogButtonBox" name="validate_buttonBox">
+      <property name="standardButtons">
+       <set>QDialogButtonBox::Apply</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main_Dialog</class>
+ <widget class="QDialog" name="Main_Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1416</width>
+    <height>614</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CCTVCalib</string>
+  </property>
+  <widget class="QLabel" name="sat_image_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>104</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sattelite Image</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cctv_image_label">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>10</y>
+     <width>83</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CCTV Image</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label">
+   <property name="geometry">
+    <rect>
+     <x>1040</x>
+     <y>140</y>
+     <width>67</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cameras:</string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="sat_image_graphicsView">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>471</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::AdjustIgnored</enum>
+   </property>
+   <property name="dragMode">
+    <enum>QGraphicsView::ScrollHandDrag</enum>
+   </property>
+   <property name="resizeAnchor">
+    <enum>QGraphicsView::AnchorUnderMouse</enum>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="cctv_image_graphicsView">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>30</y>
+     <width>471</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::AdjustIgnored</enum>
+   </property>
+   <property name="dragMode">
+    <enum>QGraphicsView::ScrollHandDrag</enum>
+   </property>
+   <property name="resizeAnchor">
+    <enum>QGraphicsView::AnchorUnderMouse</enum>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="camera_list_widget">
+   <property name="geometry">
+    <rect>
+     <x>1030</x>
+     <y>160</y>
+     <width>141</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>360</y>
+     <width>317</width>
+     <height>58</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="load_sat_im_button">
+      <property name="text">
+       <string>Load Satellite Image</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="load_sat_pts_button">
+      <property name="text">
+       <string>Load Sat&lt;-&gt;GPS points</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="create_from_GM_button">
+      <property name="text">
+       <string>Create from Google</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="calib_cam_keypoints_button">
+   <property name="geometry">
+    <rect>
+     <x>521</x>
+     <y>392</y>
+     <width>123</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Calibrate camera</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>1200</x>
+     <y>40</y>
+     <width>20</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_2">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>30</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display options:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="grid_display_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>60</y>
+     <width>121</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Display grid</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QSlider" name="grid_rot_horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>110</y>
+     <width>160</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>-180</number>
+   </property>
+   <property name="maximum">
+    <number>180</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_3">
+   <property name="geometry">
+    <rect>
+     <x>1250</x>
+     <y>90</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>grid rotation</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_4">
+   <property name="geometry">
+    <rect>
+     <x>1240</x>
+     <y>130</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>X grid translation</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_9">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>220</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>grid cell size:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="grid_cell_size_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>1330</x>
+     <y>220</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_10">
+   <property name="geometry">
+    <rect>
+     <x>1380</x>
+     <y>220</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>(m)</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="hl_display_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>320</y>
+     <width>171</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Display horizon line</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="zenith_display_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>350</y>
+     <width>171</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>display zenith</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_5">
+   <property name="geometry">
+    <rect>
+     <x>1240</x>
+     <y>170</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Y grid translation</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="grid_trans_x_horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>150</y>
+     <width>160</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>-100</number>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="grid_trans_y_horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>190</y>
+     <width>160</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>-100</number>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_11">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>251</y>
+     <width>111</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>grid length:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_12">
+   <property name="geometry">
+    <rect>
+     <x>1380</x>
+     <y>250</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>(m)</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="grid_length_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>1330</x>
+     <y>250</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>100</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_13">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>280</y>
+     <width>111</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>grid width:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_14">
+   <property name="geometry">
+    <rect>
+     <x>1380</x>
+     <y>280</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>(m)</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="grid_width_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>1330</x>
+     <y>280</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>100</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="zenith_length_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>1330</x>
+     <y>380</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_15">
+   <property name="geometry">
+    <rect>
+     <x>1380</x>
+     <y>380</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>(m)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_16">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>381</y>
+     <width>111</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>zenith length:</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>450</y>
+     <width>1121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_6">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>440</y>
+     <width>151</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Calibration options:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="PnP_comboBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>560</y>
+     <width>120</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>P5Pfr</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>P4Pf</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>P4Pfr_planar</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Homography</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Radial Homography</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_17">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>540</y>
+     <width>111</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PnP algorithm:</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>386</x>
+     <y>470</y>
+     <width>20</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_7">
+   <property name="geometry">
+    <rect>
+     <x>433</x>
+     <y>470</y>
+     <width>208</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Pyramidal dense registration&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_4">
+   <property name="geometry">
+    <rect>
+     <x>653</x>
+     <y>470</y>
+     <width>20</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="activate_ecc_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>403</x>
+     <y>490</y>
+     <width>211</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Activate dense registration</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="ecc_disto_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>403</x>
+     <y>510</y>
+     <width>211</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refine distortion</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_18">
+   <property name="geometry">
+    <rect>
+     <x>403</x>
+     <y>562</y>
+     <width>131</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nb of scale:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_19">
+   <property name="geometry">
+    <rect>
+     <x>403</x>
+     <y>582</y>
+     <width>131</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nb of iterations:</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="binary_ecc_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>403</x>
+     <y>530</y>
+     <width>211</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Binary image </string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ecc_nb_scale_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>523</x>
+     <y>560</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ecc_nb_it_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>523</x>
+     <y>580</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>15</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="set_bin_thresh_pushButton">
+   <property name="geometry">
+    <rect>
+     <x>523</x>
+     <y>530</y>
+     <width>111</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Set thresholds</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_8">
+   <property name="geometry">
+    <rect>
+     <x>724</x>
+     <y>470</y>
+     <width>118</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Sparse matching&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_20">
+   <property name="geometry">
+    <rect>
+     <x>673</x>
+     <y>515</y>
+     <width>151</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>matching algorithm:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="matching_algo_comboBox">
+   <property name="geometry">
+    <rect>
+     <x>673</x>
+     <y>535</y>
+     <width>120</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>GMS</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>KLT</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SuperGlue</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QCheckBox" name="keypoints_activ_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>673</x>
+     <y>490</y>
+     <width>211</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Activate keypoints matching</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_21">
+   <property name="geometry">
+    <rect>
+     <x>673</x>
+     <y>566</y>
+     <width>131</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RANSAC iteration:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_22">
+   <property name="geometry">
+    <rect>
+     <x>673</x>
+     <y>588</y>
+     <width>131</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RANSAC threshold:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ransac_thresh_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>813</x>
+     <y>586</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>10</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ransac_it_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>813</x>
+     <y>566</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1000</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_23">
+   <property name="geometry">
+    <rect>
+     <x>859</x>
+     <y>586</y>
+     <width>26</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>(px)</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_5">
+   <property name="geometry">
+    <rect>
+     <x>903</x>
+     <y>470</y>
+     <width>20</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_24">
+   <property name="geometry">
+    <rect>
+     <x>953</x>
+     <y>470</y>
+     <width>157</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Non-linear optimization&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="activ_optim_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>923</x>
+     <y>490</y>
+     <width>211</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Activate optimization</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="refine_int_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>923</x>
+     <y>510</y>
+     <width>231</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refine Intrinsics and extrinsics</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="load_int_pushButton">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>500</y>
+     <width>111</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load Intrinsics</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_6">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>470</y>
+     <width>20</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_25">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>470</y>
+     <width>136</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Image preprocessing&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="color_align_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>490</y>
+     <width>132</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>color alignment</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="cctv_denoise_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>520</y>
+     <width>132</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>cctv denoising</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="sat_denoise_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>550</y>
+     <width>150</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>satellite denoising</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="known_intrinsics_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>470</y>
+     <width>132</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>known intrinsics</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="max_cov_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>1083</x>
+     <y>569</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>100</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_26">
+   <property name="geometry">
+    <rect>
+     <x>920</x>
+     <y>570</y>
+     <width>158</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>max coverage distance:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="camera_list_label_27">
+   <property name="geometry">
+    <rect>
+     <x>1130</x>
+     <y>570</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>(m)</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_7">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>540</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="display_overlap_button">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>392</y>
+     <width>111</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Display overlay</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>1030</x>
+     <y>361</y>
+     <width>144</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="save_results_button">
+      <property name="text">
+       <string>Save results</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="camera_list_label_28">
+      <property name="text">
+       <string>Project's name:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="project_name_lineEdit">
+      <property name="text">
+       <string>MyProject</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>521</x>
+     <y>360</y>
+     <width>432</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="add_camera_button">
+      <property name="text">
+       <string>Add new camera</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="automatic_keypoints_button">
+      <property name="text">
+       <string>Automatic keypoints</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>OR</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QPushButton" name="select_keypoints_button">
+      <property name="text">
+       <string>Select keypoints</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
