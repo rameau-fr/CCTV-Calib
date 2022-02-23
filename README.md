@@ -96,6 +96,7 @@ Over trials over surveillance cameras around the world, CCTV-Calib mostly provid
 - The principal point located in the center of the image is assumed
 
 # Application to vehicle geolocalization
-[![IMAGE ALT TEXT](https://i3.ytimg.com/vi/V1n9MUZP7Ec/maxresdefault.jpg)](http://www.youtube.com/watch?v=V1n9MUZP7Ec&t=1s "Video Title")
+[![IMAGE ALT TEXT](https://i3.ytimg.com/vi/V1n9MUZP7Ec/maxresdefault.jpg)](http://www.youtube.com/watch?v=V1n9MUZP7Ec&t=1s "Trailer")
+[![IMAGE ALT TEXT](https://i3.ytimg.com/vi/24Iw_wvUmjE/maxresdefault.jpg)](https://www.youtube.com/watch?v=24Iw_wvUmjE&t=532s "Car geolocalization KAIST")
 
 
