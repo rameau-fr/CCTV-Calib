@@ -87,7 +87,7 @@ You can include as many cameras as you would like and calibrate them. They will 
 Set your project name and press ```Save results```.
 The resulting calibration is stored in one *.yml file per camera.
 
-# Shortcoming
+# Shortcomings
 Over trials over surveillance cameras around the world, CCTV-Calib mostly provided accurate and stable results. However, it still suffer a certain number of limitations that we are listing here:
 - The satellite image is assumed to be an orthographic view
 - The correspondances are assumed to lie on a planar surface (thus the presence of roadmarkings is preferable)
