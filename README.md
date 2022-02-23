@@ -14,13 +14,13 @@ Important notice: A mouse with a wheel is required to properly use the toolbox.
 </figure>
 
 ## Dependencies
-matplotlib==2.1.1
-numpy==1.13.3
-opencv_python==4.1.2.30
-PyQt5==5.15.6
-requests==2.18.4
-scipy==1.4.1
-torch==1.4.0
+matplotlib==2.1.1 <br/>
+numpy==1.13.3 <br/>
+opencv_python==4.1.2.30 <br/>
+PyQt5==5.15.6 <br/>
+requests==2.18.4 <br/>
+scipy==1.4.1 <br/>
+torch==1.4.0 <br/>
 
 ## Tutorial
 
