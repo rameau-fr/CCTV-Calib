@@ -96,6 +96,6 @@ Over trials over surveillance cameras around the world, CCTV-Calib mostly provid
 - The principal point located in the center of the image is assumed
 
 # Application to vehicle geolocalization
-[![Video CCTV Calib Trailer](https://img.youtube.com/vi/V1n9MUZP7Ec&t=1s/0.jpg)](https://www.youtube.com/watch?v=V1n9MUZP7Ec&t=1s)
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/V1n9MUZP7Ec&t=1s/0.jpg)](http://www.youtube.com/watch?v=V1n9MUZP7Ec&t=1s "Video Title")
 
 
