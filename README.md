@@ -87,6 +87,17 @@ You can include as many cameras as you would like and calibrate them. They will 
 Set your project name and press ```Save results```.
 The resulting calibration is stored in one *.yml file per camera.
 
+# Calibration examples
+<figure>
+<img src="img/Figure_result_KAIST.png" alt="Trulli" style="width:100%">
+<figcaption align = "center"><b>Fig.2 - KAIST Calibration results</b></figcaption>
+</figure>
+
+<figure>
+<img src="img/Figure_result_AICity.png" alt="Trulli" style="width:100%">
+<figcaption align = "center"><b>Fig.3 - AICity Calibration results</b></figcaption>
+</figure>
+
 # Shortcomings
 Over trials over surveillance cameras around the world, CCTV-Calib mostly provided accurate and stable results. However, it still suffer a certain number of limitations that we are listing here:
 - The satellite image is assumed to be an orthographic view
@@ -100,6 +111,14 @@ Over trials over surveillance cameras around the world, CCTV-Calib mostly provid
 [![IMAGE ALT TEXT](https://i3.ytimg.com/vi/24Iw_wvUmjE/maxresdefault.jpg)](https://www.youtube.com/watch?v=24Iw_wvUmjE&t=532s "Car geolocalization KAIST")
 
 # Datasets
+
+In order to evaluate the accuracy of our calibration pipeline, we create a novel synthetic dataset composed of real satellite images as well as virtual views synthesized from [Google Earth Studio](https://www.google.com/earth/studio/).
+This dataset consists of 100 images captured in 10 different cities around the globe: Dijon, Brussels, Zurich, Paris, Montreal, Taipei, London, Tokyo, New York and Berlin. Ten satellite-CCTV image pairs have been captured per city. Each 1920x1080px CCTV image is provided with its ground truth GPS location, altitude (w.r.t. the sea level), pan (w.r.t. North), tilt (w.r.t. the ground plane) and focal length. Their corresponding 1280x1280px satellite images are provided with their meta-data.
+
+<figure>
+<img src="img/CCTV_Calib_Dataset-1.png" alt="Trulli" style="width:100%">
+<figcaption align = "center"><b>Fig.4 - CCTV-Calib Dataset trailer</b></figcaption>
+</figure>
 
 Google earth dataset (1.8GB): https://bosch.frameau.xyz/index.php/s/sqaNrPWL4KifJjK </br>
 
